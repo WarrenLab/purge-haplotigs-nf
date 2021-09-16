@@ -1,0 +1,9 @@
+name: purge-haplotigs-nf
+channels:
+    - defaults
+    - bioconda
+    - conda-forge
+dependencies:
+    - minimap2=2.21
+    - samtools=1.10
+    - purge_haplotigs=1.1.1
