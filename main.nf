@@ -21,7 +21,7 @@ process align {
 
     """
     samtools fastq $subreads | \
-        minimap2 -t ${task.cpus} -ax map-pb --secondary=no $contigs $subreads \
+        minimap2 -t ${task.cpus} -ax map-pb --secondary=no $contigs - \
         | samtools sort -m 10G -o ${subreads.baseName}.aligned.bam
     samtools index ${subreads.baseName}.aligned.bam
     """
