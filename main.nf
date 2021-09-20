@@ -66,7 +66,7 @@ workflow {
 
     if ( ! (params.low && params.mid && params.high )) {
         align(assembly, subreads)
-        histogram(assembly, aligned.out)
+        histogram(assembly, align.out)
     } else {
         purge(assembly, file(params.gencov))
     }
