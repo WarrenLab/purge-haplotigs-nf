@@ -28,7 +28,7 @@ process align {
 }
 
 process histogram {
-    publishDir 'histogram'
+    publishDir 'histogram', mode: 'copy'
     
     input:
     path contigs
